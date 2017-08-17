@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>vue-picker</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+<script src='https://unpkg.com/vue'></script>
+<script src="../dist/vue-picker.min.js"></script>
+<div id="app">
+    <template>
+        <h1>Vue Picker</h1>
+        <div class='container'>
+            <div class="example-item">
+                <h3> simple example</h3>
+                <code>
+                    data() {
+                        return {
+                            is_show_picker: false,
+                            picker_data: [],
+                            picker_val: ['粤', 'A', '本田CR-V'],
+                        }
+                    }
+                    <br>
+                    &lt;picker v-model=&#x27;picker_val&#x27;
+                            :is_show.sync=&#x27;is_show_picker&#x27;
+                            :title=&#x27;'选择地区、车牌、车型'&#x27;
+                            :item_title=&#x27;['地区','车牌','车型']&#x27;
+                            :data=&#x27;picker_data"
+                            :selected_color=&#x27;'#eabf50'&#x27;
+                            :width_ratio=&#x27;[1,1,3]&#x27;&gt;&lt;/picker&gt;
+                </code>
+                <picker v-model="picker_val"
+                        :is_show.sync="is_show_picker"
+                        :title="'选择地区、车牌、车型'"
+                        :item_title="['地区','车牌','车型']"
+                        :data="picker_data"
+                        :selected_color="'#eabf50'"
+                        :width_ratio="[1,1,3]"></picker>
+                <div class='example-btn' @click='picker_show'>look look!!!</div>
+                {{picker_val}}
+            </div>
+        </div>
+    </template>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                is_show_picker: false,
+                picker_data: [],
+                picker_val: ['粤', 'A', '本田CR-V'],
+            }
+        },
+        mounted: function () {
+            this.init();
+        },
+        methods: {
+            init: function () {
+                this.picker_data = [
+                    ['京', '冀', '晋', '蒙', '辽', '吉', '黑', '沪', '苏', '浙', '皖', '闽', '赣', '鲁', '豫', '鄂', '湘', '粤', '琼', '渝', '川', '贵', '藏', '陕', '甘', '青', '宁', '新'],
+                    ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
+                    ['奥迪Q7', '本田CR-V', '兰博基尼第六元素'],
+                ]
+            },
+            picker_close: function () {
+                console.log('关闭picker');
+            },
+            picker_show(){
+                this.is_show_picker = true;
+            }
+        }
+    })
+</script>
+</body>
+
+</html>

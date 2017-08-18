@@ -3,8 +3,6 @@
 vue-picker-model is a dependency-free, lightweight vue component.
 You only need to set the title and data description, the source data, it will automatically generate an efficient mobile-based selector.
 
-## [Try the demo](http://github.com/Oyang90/vue-picker-model/demo/)
-
 ### How to use?
 ```bash
 npm install vue-picker-model

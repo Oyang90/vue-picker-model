@@ -8,7 +8,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, './dist'),
         publicPath: '/dist/',
-        filename: 'vue-picker.min.js',
+        filename: 'vue-picker-model.min.js',
         library: 'picker',
         libraryTarget: 'umd',
         umdNamedDefine: true

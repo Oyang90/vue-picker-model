@@ -26,13 +26,14 @@ npm install vue-picker-model
     components: { picker },
     data () {
       return {
-        is_show_picker: false,
-        title:"选择地区、车牌、车型",
-        item_title:"['地区','车牌','车型']",
-        selected_color:"#eabf50",
-        width_ratio:"[1,1,3]",
-        picker_data: [['京', '冀', '晋', '蒙', '辽', '吉', '黑', '沪', '苏', '浙', '皖', '闽', '赣', '鲁', '豫', '鄂', '湘', '粤', '琼', '渝', '川', '贵', '藏', '陕', '甘', '青', '宁', '新'],['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],['奥迪Q7', '本田CR-V', '兰博基尼第六元素'],],
-        picker_val: ['粤', 'A', '本田CR-V'],
+           is_show_picker: false,
+           is_show_picker: false,
+           title: "选择地区、车牌、车型",
+           item_title: ['地区', '车牌', '车型'],
+           selected_color: "#eabf50",
+           width_ratio: [1, 1, 3],
+           picker_data: [['京', '冀', '晋', '蒙', '辽', '吉', '黑', '沪', '苏', '浙', '皖', '闽', '赣', '鲁', '豫', '鄂', '湘', '粤', '琼', '渝', '川', '贵', '藏', '陕', '甘', '青', '宁', '新'],['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],['奥迪Q7', '本田CR-V', '兰博基尼第六元素']],
+           picker_val: ['粤', 'A', '本田CR-V']
       }
     }
   }

@@ -146,10 +146,7 @@
             }
         },
         beforeMount: function () {
-            var _self = this;
-            for (var i = 0; i < _self.data.length; i++) {
-                _self.cur_val.push(_self.data[i][0]);
-            }
+            this.cur_data = this.data;
         },
         updated: function () {
             var _self = this;
@@ -261,22 +258,7 @@
         watch: {
             cur_val(val){
                 this.$emit('input', val);
-            },
-            data(val){
-                var _self = this;
-                if (_self.cur_data === null) {
-                    _self.cur_data = val;
-                    return;
-                }
-                if (_self.cur_data.toString() !== val.toString()) {
-                    for (var i = 0; i < val.length; i++) {
-                        if (_self.cur_data[i].toString() !== val[i].toString()) {
-                            _self.cur_data[i] = val[i];
-                            _self.scrollToItem(i, 0);
-                        }
-                    }
-                }
             }
-        },
+        }
     }
 </script>

@@ -42,5 +42,5 @@ npm install vue-picker-model
 ```
 demo:
 
-![demo](https://github.com/Oyang90/vue-picker-model/static/demo.gif)
+![demo](https://raw.githubusercontent.com/Oyang90/vue-picker-model/master/static/demo.gif)
 

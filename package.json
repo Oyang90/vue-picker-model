@@ -1,6 +1,6 @@
 {
-  "name": "vue-picker",
-  "description": "vue-picker",
+  "name": "vue-picker-model",
+  "description": "vue-picker-model",
   "version": "1.0.0",
   "private": true,
   "scripts": {

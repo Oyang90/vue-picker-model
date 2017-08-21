@@ -134,7 +134,6 @@
         ],
         data(){
             return {
-                cur_data: null,
                 cur_val: [],
                 is_init: false,
                 scroll_data: {
@@ -144,9 +143,6 @@
                 },
                 isScrolling: false
             }
-        },
-        beforeMount: function () {
-            this.cur_data = this.data;
         },
         updated: function () {
             var _self = this;
@@ -247,7 +243,7 @@
                 for (var key = 0; key < _self.cur_val.length; key++) {
                     val_arr.push(_self.cur_val[key]);
                 }
-                val_arr[i] = _self.cur_data[i][j];
+                val_arr[i] = _self.data[i][j];
                 _self.cur_val = val_arr;
             },
             close(){

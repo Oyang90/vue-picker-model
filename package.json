@@ -1,7 +1,7 @@
 {
   "name": "vue-picker-model",
   "description": "vue-picker-model",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "dist/vue-picker-model.min.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"

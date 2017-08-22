@@ -36,6 +36,7 @@
                     <div class="picker_item">&nbsp;</div>
                     <div class="picker_item">&nbsp;</div>
                 </div>
+                <div class="picker_linear" ref="picker_linear"></div>
             </div>
         </div>
     </div>
@@ -115,10 +116,28 @@
         height: 40px;
         line-height: 40px;
         z-index: 10001;
+        opacity: .3;
     }
 
     .picker_item.selected {
         color: #09b6f2;
+        opacity: 1;
+    }
+
+    .picker_linear {
+        position: absolute;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+
+        background: -webkit-gradient(linear, left bottom, left top, from(#fff), color-stop(0.52, rgba(245, 245, 245, 0)), color-stop(0.48, rgba(245, 245, 245, 0)), to(#fff));
+        background: -webkit-linear-gradient(#fff, rgba(245, 245, 245, 0) 52%, rgba(245, 245, 245, 0) 48%, #fff);
+        background: -moz-linear-gradient(#fff, rgba(245, 245, 245, 0) 52%, rgba(245, 245, 245, 0) 48%, #fff);
+        background: linear-gradient(#fff, rgba(245, 245, 245, 0) 52%, rgba(245, 245, 245, 0) 48%, #fff)
+
     }
 </style>
 <script>
